@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  little_pic: MyString
+  more_pics: 
+  category: 
+  price: 1
+  existence: false
+
+two:
+  name: MyString
+  description: MyText
+  little_pic: MyString
+  more_pics: 
+  category: 
+  price: 1
+  existence: false
