@@ -1,6 +1,12 @@
-body {background-color: #7f4f22;}
+body {background-color: #e8ba68;}
+#menu {
+  background: #BDC299;
+  padding: 40px;
+  margin: 40px auto;
+  width: 880px;
+}
 #content {
-  background: #fff;
+  background: #BDC299;
   padding: 40px;
   margin: 40px auto;
   width: 880px;

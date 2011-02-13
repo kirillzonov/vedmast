@@ -8,7 +8,9 @@
 </head>
 <body>
   <div id="header"></div>
-  <div id="menu"></div>
+  <div id="menu">
+    <%= link_to 'Новости', nil %> || <%= link_to 'Информация', nil %> || <%= link_to 'Товар', nil %> || <%= link_to 'Контакты', nil %> || <%= link_to 'Вопросы', nil %>
+  </div>
   <div id="content">
 <%= yield %>
 </div>
