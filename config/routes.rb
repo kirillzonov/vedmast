@@ -1,8 +1,10 @@
 Obereg::Application.routes.draw do
+  resources :news
+
   resources :categories
 
   resources :articles
-  root :to => "home#index"
+  root :to => "news#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
