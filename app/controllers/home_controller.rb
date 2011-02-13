@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
   def index
-    @main = RedCloth.new(Main.last.main).to_html
+    if Main.last
+      @main = RedCloth.new(Main.last.main).to_html
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @categories }
