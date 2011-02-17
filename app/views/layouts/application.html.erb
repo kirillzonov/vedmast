@@ -9,7 +9,27 @@
 <body>
   <div id="header"></div>
   <div id="menu">
-    <%= link_to 'Новости', nil %> || <%= link_to 'Информация', nil %> || <%= link_to 'Товар', nil %> || <%= link_to 'Контакты', nil %> || <%= link_to 'Вопросы', nil %>
+    <script>
+      $(document).ready(function() {
+        $('#categories').hover(
+        function(){
+          $('#popup-categories').show();
+        },
+        function(){
+          $('#popup-categories').hide();
+        }
+        );
+      });
+    </script>
+
+    <%= link_to 'Новости', nil %> || <%= link_to 'Информация', nil %> || 
+    <div id="categories">Товары</div>
+    <div id="popup-categories"  style="display: none; height: auto;">
+      <% @categories.each do |cat| %>
+        <%= link_to cat.name, cat %><br>
+      <% end %>
+    </div>
+        || <%= link_to 'Контакты', nil %> || <%= link_to 'Вопросы', nil %>
   </div>
   <div id="content">
 <%= yield %>
