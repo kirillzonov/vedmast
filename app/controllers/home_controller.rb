@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  before_filter :get_categories
   def index
     if Main.last
       @main = RedCloth.new(Main.last.main).to_html

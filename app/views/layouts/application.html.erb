@@ -4,23 +4,12 @@
   <title>Obereg</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag 'jquery' %>
   <%= csrf_meta_tag %>
 </head>
 <body>
   <div id="header"></div>
   <div id="menu">
-    <script>
-      $(document).ready(function() {
-        $('#categories').hover(
-        function(){
-          $('#popup-categories').show();
-        },
-        function(){
-          $('#popup-categories').hide();
-        }
-        );
-      });
-    </script>
 
     <%= link_to 'Новости', nil %> || <%= link_to 'Информация', nil %> || 
     <div id="categories">Товары</div>
@@ -31,6 +20,15 @@
     </div>
         || <%= link_to 'Контакты', nil %> || <%= link_to 'Вопросы', nil %>
   </div>
+    <script>
+      $("#categories").click(function () {
+        if ($("#popup-categories").is(":hidden")) {
+          $("#popup-categories").slideDown("slow");
+      } else {
+      $("#popup-categories").hide();
+  }
+});
+    </script>
   <div id="content">
 <%= yield %>
 </div>

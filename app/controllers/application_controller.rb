@@ -1,4 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  @categories = Category.all
+  helper_method :get_categories
+
+  def get_categories
+    @categories = Category.all
+  end
 end

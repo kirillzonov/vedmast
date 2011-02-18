@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_filter :get_categories
   # GET /articles
   # GET /articles.xml
   def index
