@@ -1,5 +1,6 @@
 # This controller handles the login/logout function of the site.  
 class SessionsController < ApplicationController
+  before_filter :get_categories
   # Be sure to include AuthenticationSystem in Application Controller instead
 
   # render new.rhtml
