@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Page:</b>
+  <%= @admin_information.page %>
+</p>
+
+<p>
+  <b>Main:</b>
+  <%= @admin_information.main %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_information_path(@admin_information) %> |
+<%= link_to 'Back', admin_informations_index_path %>

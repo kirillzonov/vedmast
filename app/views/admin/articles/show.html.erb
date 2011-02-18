@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @admin_article.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @admin_article.description %>
+</p>
+
+<p>
+  <b>Material:</b>
+  <%= @admin_article.material %>
+</p>
+
+<p>
+  <b>Little pic:</b>
+  <%= @admin_article.little_pic %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @admin_article.category %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @admin_article.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_article_path(@admin_article) %> |
+<%= link_to 'Back', admin_articles_path %>
