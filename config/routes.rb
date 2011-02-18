@@ -1,4 +1,6 @@
 Obereg::Application.routes.draw do
+  get "pages/index"
+
   resources :users
 
   resource :session, :only => [:new, :create, :destroy]
@@ -12,7 +14,7 @@ Obereg::Application.routes.draw do
   resources :categories
 
   resources :articles
-  root :to => "home#index"
+  root :to => "pages#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
