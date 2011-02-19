@@ -71,7 +71,7 @@ class Admin::PagesController < ApplicationController
     @admin_page.destroy
 
     respond_to do |format|
-      format.html { redirect_to(admin_pages_url) }
+      format.html { redirect_to(pages_url) }
     end
   end
 end
