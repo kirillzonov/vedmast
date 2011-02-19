@@ -1,0 +1,14 @@
+<% if logged_in? %>
+  <%= link_to 'Редактирование категорий', admin_categories_path %><br>
+
+  <%= link_to 'Редактирование товаров', admin_articles_path %><br>
+
+  <%= link_to 'Редактирование страниц информации', admin_informations_path %><br>
+
+  <%= link_to 'Редактирование главной/дополнительных страниц', admin_pages_path %><br>
+
+  <%= link_to 'Администрирование вопросов', admin_questions_path %>
+<% else %>
+  You should have admin privilegies to access this page.<br>
+  <%= link_to 'Авторизация', login_path %>
+<% end %>

@@ -15,7 +15,8 @@ Obereg::Application.routes.draw do
 
   resources :articles
 
-  resources :pages
+  resources :pages, :only => [:index]
+  match 'admin_index' => 'pages#admin_index'
 
   root :to => "pages#index"
 
@@ -24,6 +25,7 @@ Obereg::Application.routes.draw do
     resources :articles
     resources :questions
     resources :pages
+    resources :informations
   
       root :to => 'articles#index'
   end
