@@ -21,9 +21,9 @@
     <td><%= admin_article.little_pic %></td>
     <td><%= admin_article.category %></td>
     <td><%= admin_article.price %></td>
-    <td><%= link_to 'Show', admin_article %></td>
+    <td><%= link_to 'Show', [:admin,admin_article] %></td>
     <td><%= link_to 'Edit', edit_admin_article_path(admin_article) %></td>
-    <td><%= link_to 'Destroy', admin_article, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', [:admin,admin_article], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
