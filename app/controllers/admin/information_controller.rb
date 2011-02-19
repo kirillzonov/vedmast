@@ -1,4 +1,5 @@
 class Admin::InformationController < ApplicationController
+  before_filter :get_categories
   # GET /admin/information
   # GET /admin/information.xml
   def index

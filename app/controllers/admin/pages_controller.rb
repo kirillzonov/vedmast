@@ -1,4 +1,5 @@
 class Admin::PagesController < ApplicationController
+  before_filter :get_categories
   # GET /admin/pages
   # GET /admin/pages.xml
   def index

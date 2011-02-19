@@ -1,4 +1,5 @@
 class Admin::CategoriesController < ApplicationController
+  before_filter :get_categories
   # GET /admin/categories
   # GET /admin/categories.xml
   def index
