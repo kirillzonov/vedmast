@@ -1,4 +1,5 @@
 class Admin::QuestionsController < ApplicationController
+  before_filter :login_required
   before_filter :get_categories
   # GET /admin/questions
   # GET /admin/questions.xml

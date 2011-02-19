@@ -3,7 +3,8 @@ body {background-color: #e8ba68;}
   background: #BDC299;
   padding: 40px;
   margin: 40px auto;
-  width: 880px;
+  width: 120px;
+  float: left;
 }
 #content {
   background: #BDC299;

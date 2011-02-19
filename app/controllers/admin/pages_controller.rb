@@ -1,5 +1,6 @@
 class Admin::PagesController < ApplicationController
   before_filter :get_categories
+  before_filter :login_required
   # GET /admin/pages
   # GET /admin/pages.xml
   def index

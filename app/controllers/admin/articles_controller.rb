@@ -1,4 +1,5 @@
 class Admin::ArticlesController < ApplicationController
+  before_filter :login_required
   before_filter :get_categories
   # GET /admin/articles
   # GET /admin/articles.xml
