@@ -11,11 +11,11 @@
 
 <% @admin_pages.each do |admin_page| %>
   <tr>
-    <td><%= admin_page.page %></td>
-    <td><%= admin_page.main %></td>
-    <td><%= link_to 'Show', admin_page %></td>
+    <td><%= admin_page.name %></td>
+    <td><%= admin_page.content %></td>
+    <td><%= link_to 'Show', [:admin,admin_page] %></td>
     <td><%= link_to 'Edit', edit_admin_page_path(admin_page) %></td>
-    <td><%= link_to 'Destroy', admin_page, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', [:admin,admin_page], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
