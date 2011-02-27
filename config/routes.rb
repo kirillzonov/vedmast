@@ -1,5 +1,5 @@
 Obereg::Application.routes.draw do
-  resources :questions
+  resources :questions, :only => [:new, :create, :index]
 
   resources :information
 
@@ -27,7 +27,6 @@ Obereg::Application.routes.draw do
   namespace :admin do
     resources :categories
     resources :articles
-    resources :questions
     resources :pages
     resources :informations
   
