@@ -21,6 +21,11 @@ class QuestionsController < ApplicationController
     end
   end
 
+  # GET /articles/1/edit
+  def edit
+    @article = Article.find(params[:id])
+  end
+
   # POST /questions
   # POST /questions.xml
   def create
@@ -33,6 +38,22 @@ class QuestionsController < ApplicationController
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @question.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  # PUT /articles/1
+  # PUT /articles/1.xml
+  def update
+    @article = Article.find(params[:id])
+
+    respond_to do |format|
+      if @article.update_attributes(params[:article])
+        format.html { redirect_to(@article, :notice => 'Article was successfully updated.') }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @article.errors, :status => :unprocessable_entity }
       end
     end
   end
