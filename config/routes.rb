@@ -1,4 +1,6 @@
 Obereg::Application.routes.draw do
+  resources :questions
+
   resources :information
 
   get "pages/index"
