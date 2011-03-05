@@ -21,8 +21,10 @@
     </div>
     <%= link_to 'Контакты', nil %>
     <%= link_to 'Вопросы', questions_path %>
+    <% if logged_in? -%>
     -----------
         <%= link_to 'Добавить категорию', new_category_path %>
+    <% end %>
   </div>
     <script>
       $("#categories").click(function () {
