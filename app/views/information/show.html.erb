@@ -7,7 +7,7 @@
 
 <p>
   <b>Content:</b>
-  <%= @information.content %>
+    <%= raw sanitize RedCloth.new(@information.content).to_html %>
 </p>
 
 

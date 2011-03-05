@@ -2,7 +2,7 @@ class InformationController < ApplicationController
   # GET /information
   # GET /information.xml
   def index
-    @information = Information.all
+    @information = Information.all.paginate(:page => params[:page], :per_page => 3)
 
     respond_to do |format|
       format.html # index.html.erb

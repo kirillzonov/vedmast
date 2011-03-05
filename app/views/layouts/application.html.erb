@@ -12,7 +12,7 @@
   <div id="menu">
 
     <%= link_to 'Главная', root_path %> 
-    <%= link_to 'Информация', nil %>  
+    <%= link_to 'Информация', information_index_path %>  
     <div id="categories">Товары</div>
     <div id="popup-categories"  style="display: none; height: auto;">
       <% @categories.each do |cat| %>

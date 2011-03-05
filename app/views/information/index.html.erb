@@ -3,23 +3,30 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Content</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
-
+  <%= will_paginate @information %>
 <% @information.each do |information| %>
   <tr>
-    <td><%= information.name %></td>
-    <td><%= information.content %></td>
-    <td><%= link_to 'Show', information %></td>
+    <td><%= link_to information.name, information %></td>
+  </tr>
+  <tr>
+    <td><%= RedCloth.new(information.content[0..100]).to_html.gsub!(/(<.{0,5}>)/, '') %></td>
+  </tr>
+<% if logged_in? -%>
+  <tr>
     <td><%= link_to 'Edit', edit_information_path(information) %></td>
     <td><%= link_to 'Destroy', information, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
+<% end %>
 </table>
+  <%= will_paginate @information %>
 
 <br />
 
-<%= link_to 'New Information', new_information_path %>
+<% if logged_in? -%>
+  <%= link_to 'New Information', new_information_path %>
+<% end %>
