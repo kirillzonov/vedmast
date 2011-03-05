@@ -13,7 +13,7 @@
     <td><%= link_to information.name, information %></td>
   </tr>
   <tr>
-    <td><%= RedCloth.new(information.content[0..100]).to_html.gsub!(/(<.{0,5}>)/, '') %></td>
+    <td><%= information.short %></td>
   </tr>
 <% if logged_in? -%>
   <tr>
