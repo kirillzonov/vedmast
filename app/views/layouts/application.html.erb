@@ -13,11 +13,7 @@
 
     <%= link_to 'Главная', root_path %> 
     <%= link_to 'Информация', information_index_path %>  
-    <div id="categories">Товары
-      <% if @categories.nil? %>
-        <%= link_to 'Добавить категорию', new_category_path %>
-      <% end %>
-    </div>
+    <div id="categories">Товары</div>
     <div id="popup-categories"  style="display: none; height: auto;">
       <% @categories.each do |cat| %>
         <%= link_to cat.name, cat %><br>
@@ -25,6 +21,8 @@
     </div>
     <%= link_to 'Контакты', nil %>
     <%= link_to 'Вопросы', questions_path %>
+    -----------
+        <%= link_to 'Добавить категорию', new_category_path %>
   </div>
     <script>
       $("#categories").click(function () {
