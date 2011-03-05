@@ -20,7 +20,7 @@
       <% end %>
     </div>
     <%= link_to 'Контакты', nil %>
-    <%= link_to 'Вопросы', question_path %>
+    <%= link_to 'Вопросы', questions_path %>
     <%= link_to 'Администрирование', admin_index_path %>
   </div>
     <script>
@@ -35,5 +35,8 @@
   <div id="content">
 <%= yield %>
 </div>
+<% if logged_in? -%>
+  <div id="user-bar-action"  >(<%= link_to "Стать простым пользователем", logout_path, { :title => "Log out" }    %>)</div>
+<% end -%>
 </body>
 </html>

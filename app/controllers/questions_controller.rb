@@ -3,6 +3,7 @@ class QuestionsController < ApplicationController
   # GET /questions.xml
   def index
     @questions = Question.all
+    @visible_questions = Question.visible_questions
 
     respond_to do |format|
       format.html # index.html.erb
@@ -33,7 +34,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
-        format.html { redirect_to(@question, :notice => 'Question was successfully created.') }
+        format.html { redirect_to(questions_path, :notice => 'Question was successfully created.') }
         format.xml  { render :xml => @question, :status => :created, :location => @question }
       else
         format.html { render :action => "new" }

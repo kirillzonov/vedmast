@@ -1,3 +1,6 @@
-<% if @index %>
-  <%= raw sanitize @index %>
+<% if @index_html %>
+  <%= raw sanitize @index_html %>
+<% end %>
+<% if logged_in? -%>
+  <%= link_to 'Edit', edit_page_path(@index) %>
 <% end %>
