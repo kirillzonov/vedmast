@@ -20,7 +20,8 @@ Obereg::Application.routes.draw do
   resources :articles
 
   resources :pages
-  match 'admin_index' => 'pages#admin_index'
+
+  match 'delivery' => "pages#delivery", :as => :delivery
 
   root :to => "pages#index"
 

@@ -1,0 +1,6 @@
+<% if @delivery_html %>
+  <%= raw sanitize @delivery_html %>
+<% end %>
+<% if logged_in? -%>
+  <%= link_to 'Edit', edit_page_path(@delivery) %>
+<% end %>
