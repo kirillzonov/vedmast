@@ -34,6 +34,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
+        QuestionMailer.new_question(@question).deliver
         format.html { redirect_to(questions_path, :notice => 'Question was successfully created.') }
         format.xml  { render :xml => @question, :status => :created, :location => @question }
       else

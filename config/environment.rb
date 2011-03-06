@@ -10,8 +10,8 @@ Obereg::Application.configure do
   :port => 587,
 #  :domain => " domain.of.sender.net " ,
   :authentication => "plain" ,
-  :user_name => "kirill.zonov" ,
-  :password => "888H67" ,
+  :user_name => "graffzon@gmail.com" ,
+  :password => "pG93fzTK" ,
   :enable_starttls_auto => true
   }
 end

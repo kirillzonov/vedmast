@@ -1,3 +1,6 @@
-QuestionMailer#new_question
+Посетитель с адресом <%= @question.email %> задал вопрос следующего содержания:
 
-<%= @greeting %>, find me in app/views/app/views/question_mailer/new_question.text.erb
+<%= @question.content %>
+
+Перейти к вопросу:
+<%= @url %>
