@@ -1,21 +1,21 @@
 <h1>Listing questions</h1>
 
 <table>
-<%= link_to 'New Question', new_question_path %>
-  <tr>
-    <th>Email</th>
-    <th>Content</th>
-    <th>Answer</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <% if !logged_in? %>
+    <%= link_to 'New Question', new_question_path %>
+  <% end %>
 
 <% @visible_questions.each do |question| %>
   <tr>
     <td><%= question.email %></td>
+  </tr>
+  <tr>
     <td><%= question.content %></td>
+  </tr>
+  <tr>
     <td><%= question.answer %></td>
+  </tr>
+  <tr>
     <td><%= link_to 'Show', question %></td>
   </tr>
 <% end %>

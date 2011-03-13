@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<% if logged_in? %>
+<p>
+  <b>Email:</b>
+  <%= @question.email %>
+</p>
+<% end %>
+
+<p>
+  <b>Имя:</b>
+  <%= @question.name %>
+</p>
+
+<p>
+  <b>Вопрос:</b>
+  <%= @question.content %>
+</p>
+
+<p>
+  <b>Ответ:</b>
+  <%= @question.answer %>
+</p>
+<% if logged_in? %>
+  <%= link_to 'Ответить', edit_question_path(@question) %> 
+<% end %>
+<%= link_to 'Вернуться к вопросам', questions_path %>

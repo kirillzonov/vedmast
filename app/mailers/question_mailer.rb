@@ -8,7 +8,12 @@ class QuestionMailer < ActionMailer::Base
   #
   def new_question(question)
     @question = question
-    @url = "http://vedmast.heroku.com#{edit_question_path(@question)}"
+    @url = "http://localhost:3000#{edit_question_path(@question)}"
     mail :to => "kirill.zonov@flatsoft.com"
+  end
+  def new_comment(question)
+    @question = question
+    @url = "http://localhost:3000#{question_path(@question)}"
+    mail :to => "#{@question.email}"
   end
 end
