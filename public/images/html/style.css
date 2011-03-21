@@ -1,0 +1,62 @@
+/* CSS RESET */
+html{color:#000;background:#140a02;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+
+/* GLOBAL */
+
+body { background: url(images/header2.jpg) no-repeat center top; font: normal 13px/16px "Times New Roman", serif; }
+h1 { font-style: italic; font-size: 19px; line-height: 48px; text-align: center; }
+a { font-style: italic; color: #000; text-decoration: underline; }
+a:hover { text-decoration: none; }
+strong, b { font-weight: bold; }
+em, i { font-style: italic; }
+
+/* GENERAL */
+.wrap { width: 960px; margin: 0 auto; overflow: hidden; clear: both; }
+.wrap.for-content { width: 970px; margin: 0 auto; overflow: hidden; clear: both; }
+.wrap.for-content { background: url(images/bg-content-main.png) no-repeat center 20px; }
+.wrap.home { background: url(images/bg-content.png) no-repeat center -40px; }
+
+/* HEADER */
+.header { overflow: hidden; position: relative; }
+.header h1 { width: 650px; height: 280px; display: block; overflow: hidden; text-indent: -9999px; margin: 0 0 0 40px; }
+.header h1 a { width: 100%; height: 100%; display: block; }
+.header h2 a { width: 509px; height: 71px; overflow: hidden; display: block; margin: 280px auto 0; text-indent: -9999px; background: url(images/title.png) no-repeat; }
+.header .order { position: absolute; top: 140px; right: 10px; }
+.header .order a { background: url(images/header-order.png) no-repeat; width: 107px; height: 87px; display: block; overflow: hidden; text-indent: -9999px; }
+
+/* MENU */
+.menu ul { margin: 0 52px; }
+.menu ul li { float: left; margin: 0 10px; }
+
+/* CONTENT */
+.content { width: 660px; margin: 0 auto; overflow: hidden; min-height: 496px; }
+.home .content { color: #fff33b; margin-top: 0; }
+.static .content { width: 620px; min-height: 560px; margin-top: 80px; }
+.content-after { width: 100%; height: 30px; margin: 30px 0; background: url(images/content-bottom.png) no-repeat center bottom; }
+.faq .content h1 { background: url(images/title-faq.png) no-repeat center top; height: 90px; overflow: hidden; text-indent: -9999px; }
+.content p.title { text-decoration: underline; font-weight: bold; }
+.content p { font-style: italic; }
+.about .content p, .faq .content p, .products .content p, .pagination { margin: 0 0 12px; }
+.about .content h1 { background: url(images/title-about.png) no-repeat center top; height: 90px; overflow: hidden; text-indent: -9999px; }
+.pagination { font-weight: bold; }
+.products .content h1 { background: url(images/title-products.png) no-repeat center top; height: 90px; overflow: hidden; text-indent: -9999px; }
+.products .items { width: 100%; overflow: hidden; }
+.products .items .item-field { margin: 0 0 10px; overflow: hidden; }
+.products .items .item-field .item-pic { float: left; width: 120px; }
+.products .items .item-field .item-desc { float: right; width: 490px; font-style: italic; }
+
+/* NEW */
+.new { width: 960px; margin: 0 auto; overflow: hidden; }
+.new h1 { width: 121px; height: 51px; overflow: hidden; display: block; margin: 0 auto; text-indent: -9999px; background: url(images/title-new.png) no-repeat; }
+.new .contents { width: 952px; margin: 0 auto; overflow: hidden; background: url(images/content-new-frame.png) no-repeat; height: 227px; }
+.new .contents ul { margin: 66px 0 0 25px; overflow: hidden; }
+.new .contents ul li { float: left; margin: 0 10px; }
+
+/* FRIENDS */
+.friends { width: 960px; margin: 50px auto 0; overflow: hidden; }
+.friends h1 { width: 168px; height: 64px; margin: 0 auto; overflow: hidden; text-indent: -9999px; background: url(images/title-friends.png) no-repeat; }
+.friends .contents { width: 943px; height: 102px; overflow: hidden; background: url(images/content-friends.png) no-repeat; margin: 20px auto; text-align: center; }
+
+/* COUNTERS */
+.counters-top { width: 100%; height: 13px; background: url(images/content-friends-separator.png) no-repeat center top; margin: 30px 0 20px; }
+.counters { width: 943px; height: 43px; overflow: hidden; margin: 0 auto 30px; background: url(images/content-counters.png) no-repeat; text-align: center; }
