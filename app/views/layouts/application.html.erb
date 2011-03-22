@@ -2,7 +2,6 @@
 <html>
 <head>
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
   <%= javascript_include_tag 'jquery' %>
   <%= javascript_include_tag 'DD_belatedPNG_0.0.8a' %>
   <%= csrf_meta_tag %>
@@ -39,7 +38,13 @@
     <ul>
       <li><%= link_to(image_tag("menu-home.png",:size => "150x47"), root_path) %></li>
       <li><%= link_to(image_tag("menu-info.png",:size => "150x47"), information_index_path) %></li>
-      <li><%= link_to(image_tag("menu-products.png",:size => "150x47"), root_path) %></li>
+      <li class="products"><%= image_tag("menu-products.png",:size => "150x47") %>
+      <ul>
+      <% @categories.each do |cat| %>
+        <li><%= link_to cat.name, cat %></li>
+      <% end %>
+      </ul>
+    </li>
       <li><%= link_to(image_tag("menu-contacts.png",:size => "150x47"), delivery_path) %></li>
       <li><%= link_to(image_tag("menu-faq.png",:size => "150x47"), questions_path) %></li>
     </ul>
@@ -74,24 +79,20 @@
 </div>
     <!--<div id="categories">Товары</div>
     <div id="popup-categories"  style="display: none; height: auto;">
-      <% @categories.each do |cat| %>
-        <%= link_to cat.name, cat %><br>
-      <% end %>
     </div>--!>
     <% if logged_in? -%>
     -----------
         <%= link_to 'Добавить категорию', new_category_path %>
     <% end %>
   </div>
-    <script>
-      $("#categories").click(function () {
-        if ($("#popup-categories").is(":hidden")) {
-          $("#popup-categories").slideDown("slow");
-      } else {
-      $("#popup-categories").hide();
-  }
-});
-    </script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('li.products').hover(
+          function() { $('ul', this).css('display', 'block'); },
+          function() { $('ul', this).css('display', 'none'); }
+          );
+        });
+  </script>
 <% if logged_in? -%>
   <div id="user-bar-action"  >(<%= link_to "Стать простым пользователем", logout_path, { :title => "Log out" }    %>)</div>
 <% end -%>
