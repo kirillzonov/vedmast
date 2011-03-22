@@ -49,8 +49,8 @@ em, i { font-style: italic; }
 .new { width: 960px; margin: 0 auto; overflow: hidden; }
 .new h1 { width: 121px; height: 51px; overflow: hidden; display: block; margin: 0 auto; text-indent: -9999px; background: url(title-new.png) no-repeat; }
 .new .contents { width: 952px; margin: 0 auto; overflow: hidden; background: url(content-new-frame.png) no-repeat; height: 227px; }
-.new .contents ul { margin: 66px 0 0 25px; overflow: hidden; }
-.new .contents ul li { float: left; margin: 0 10px; }
+.new .contents ul { margin: 66px 15px 0; overflow: hidden; text-align: center; }
+.new .contents ul li { display: inline; margin: 0 10px; overflow: hidden; }
 
 /* FRIENDS */
 .friends { width: 960px; margin: 50px auto 0; overflow: hidden; }

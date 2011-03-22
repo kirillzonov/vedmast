@@ -46,6 +46,32 @@
   </div>
 </div>
 
+<%= index_or_not(@ind) %>
+  <div class="content">
+<%= yield %>
+  </div>
+  <div class="content-after"></div>
+  <div class="new">
+    <h1>Новинки</h1>
+    <div class="contents">
+      <ul>
+        <li><a href="#"><img src="images/talisman-1.jpg" width="160" height="120" alt=""></a></li>
+        <li><a href="#"><img src="images/talisman-1.jpg" width="160" height="120" alt=""></a></li>
+        <li><a href="#"><img src="images/talisman-1.jpg" width="160" height="120" alt=""></a></li>
+        <li><a href="#"><img src="images/talisman-1.jpg" width="160" height="120" alt=""></a></li>
+        <li><a href="#"><img src="images/talisman-1.jpg" width="160" height="120" alt=""></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="friends">
+    <h1>Друзья сайта</h1>
+    <div class="contents"></div>
+  </div>
+  <div class="counters-top"></div>
+  <div class="counters">
+
+  </div>
+</div>
     <!--<div id="categories">Товары</div>
     <div id="popup-categories"  style="display: none; height: auto;">
       <% @categories.each do |cat| %>
@@ -66,9 +92,6 @@
   }
 });
     </script>
-  <div id="content">
-<%= yield %>
-</div>
 <% if logged_in? -%>
   <div id="user-bar-action"  >(<%= link_to "Стать простым пользователем", logout_path, { :title => "Log out" }    %>)</div>
 <% end -%>
