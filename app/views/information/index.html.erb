@@ -1,29 +1,14 @@
-<h1>Listing information</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-  <%= will_paginate @information %>
+<h1>О талисманах</h1>
+<%= will_paginate @information, :class => 'pagination' %>
 <% @information.each do |information| %>
-  <tr>
-    <td><%= link_to information.name, information %></td>
-  </tr>
-  <tr>
-    <td><%= information.short %></td>
-  </tr>
+    <%= content_tag :p, link_to(information.name, information), :class => "title"%>
+    <%= content_tag :p, information.short %>
 <% if logged_in? -%>
-  <tr>
-    <td><%= link_to 'Edit', edit_information_path(information) %></td>
-    <td><%= link_to 'Destroy', information, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+    <%= link_to 'Edit', edit_information_path(information) %>
+    <%= link_to 'Destroy', information, :confirm => 'Are you sure?', :method => :delete %>
 <% end %>
 <% end %>
-</table>
-  <%= will_paginate @information %>
+<%= will_paginate @information, :class => 'pagination' %>
 
 <br />
 
