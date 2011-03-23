@@ -15,6 +15,7 @@ em, i { font-style: italic; }
 .wrap.for-content { width: 970px; margin: 0 auto; overflow: hidden; clear: both; }
 .wrap.for-content { background: url(bg-content-main.png) no-repeat center 20px; }
 .wrap.home { background: url(bg-content.png) no-repeat center -40px; }
+.simple_link {color: #E8B24D;}
 
 /* HEADER */
 .header { position: relative; }
