@@ -1,16 +1,8 @@
-<h1>О талисманах</h1>
-<p id="notice"><%= notice %></p>
+<div class="flexcroll" id="mycustomscroll2">
+<%= raw sanitize RedCloth.new(@information.content).to_html %>
+</div>
 
-<p>
-  <b>Name:</b>
-  <%= @information.name %>
-</p>
-
-<p>
-  <b>Content:</b>
-    <%= raw sanitize RedCloth.new(@information.content).to_html %>
-</p>
-
-
-<%= link_to 'Edit', edit_information_path(@information) %> |
-<%= link_to 'Back', information_index_path %>
+<% if logged_in? -%>
+  <%= link_to 'Edit', edit_information_path(@information) %> 
+<% end %>
+<%= link_to 'Назад', information_index_path %>
