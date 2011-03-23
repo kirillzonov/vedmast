@@ -14,5 +14,7 @@ Obereg::Application.configure do
   :password => "pG93fzTK" ,
   :enable_starttls_auto => true
   }
+
+  config.gem 'tiny_mce'
 end
 
