@@ -11,13 +11,13 @@ strong, b { font-weight: bold; }
 em, i { font-style: italic; }
 
 /* GENERAL */
-.wrap { width: 960px; margin: 0 auto; overflow: hidden; clear: both; }
+.wrap { width: 960px; margin: 0 auto; clear: both; }
 .wrap.for-content { width: 970px; margin: 0 auto; overflow: hidden; clear: both; }
 .wrap.for-content { background: url(images/bg-content-main.png) no-repeat center 20px; }
 .wrap.home { background: url(images/bg-content.png) no-repeat center -40px; }
 
 /* HEADER */
-.header { overflow: hidden; position: relative; }
+.header { position: relative; }
 .header h1 { width: 650px; height: 280px; display: block; overflow: hidden; text-indent: -9999px; margin: 0 0 0 40px; }
 .header h1 a { width: 100%; height: 100%; display: block; }
 .header h2 a { width: 509px; height: 71px; overflow: hidden; display: block; margin: 280px auto 0; text-indent: -9999px; background: url(images/title.png) no-repeat; }
@@ -27,6 +27,10 @@ em, i { font-style: italic; }
 /* MENU */
 .menu ul { margin: 0 52px; }
 .menu ul li { float: left; margin: 0 10px; }
+.menu ul li.products { position: relative; }
+.menu ul li.products ul { display: none; position: absolute; top: 50px; left: 0; width: 150px; margin: 0; background: #140a02; padding: 0 0 6px; -moz-box-shadow: 0px 0px 5px #ccc; -webkit-box-shadow: 0px 0px 5px #ccc; box-shadow: 0px 0px 5px #000; }
+.menu ul li.products ul li { text-align: center; width: 100%; clear: both; margin: 4px 0; }
+.menu ul li.products ul a { color: #fff; line-height: 20px; }
 
 /* CONTENT */
 .content { width: 660px; margin: 0 auto; overflow: hidden; min-height: 496px; }
@@ -49,8 +53,8 @@ em, i { font-style: italic; }
 .new { width: 960px; margin: 0 auto; overflow: hidden; }
 .new h1 { width: 121px; height: 51px; overflow: hidden; display: block; margin: 0 auto; text-indent: -9999px; background: url(images/title-new.png) no-repeat; }
 .new .contents { width: 952px; margin: 0 auto; overflow: hidden; background: url(images/content-new-frame.png) no-repeat; height: 227px; }
-.new .contents ul { margin: 66px 0 0 25px; overflow: hidden; }
-.new .contents ul li { float: left; margin: 0 10px; }
+.new .contents ul { margin: 66px 15px 0; overflow: hidden; text-align: center; }
+.new .contents ul li { display: inline; margin: 0 10px; overflow: hidden; }
 
 /* FRIENDS */
 .friends { width: 960px; margin: 50px auto 0; overflow: hidden; }

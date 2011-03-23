@@ -39,7 +39,15 @@
 		<ul>
 			<li><a href="index.html"><img src="images/menu-home.png" width="150" height="47" alt="Главная"></a></li>
 			<li><a href="about.html"><img src="images/menu-info.png" width="150" height="47" alt="Информация"></a></li>
-			<li><a href="products.html"><img src="images/menu-products.png" width="150" height="47" alt="Изделия"></a></li>
+			<li class="products"><a href="products.html"><img src="images/menu-products.png" width="150" height="47" alt="Изделия"></a>
+				<ul>
+					<li><a href="#">Lorem ipsum</a></li>
+					<li><a href="#">Lorem ipsum</a></li>
+					<li><a href="#">Lorem ipsum</a></li>
+					<li><a href="#">Lorem ipsum</a></li>
+					<li><a href="#">Lorem ipsum</a></li>
+				</ul>
+			</li>
 			<li><a href="#"><img src="images/menu-contacts.png" width="150" height="47" alt="Контакты"></a></li>
 			<li><a href="faq.html"><img src="images/menu-faq.png" width="150" height="47" alt="Вопросы"></a></li>
 		</ul>
@@ -49,7 +57,7 @@
 	<div class="content">
 		<h1>О талисманах</h1>
 		<div class="pagination">&lt;= <a href="#">1</a> .. <a href="#">2</a> =&gt;</div>
-		<p>Мы не отдаем дань моде! Мы поступаем по велению сердца. Нынче стало модно повторять фразу «Россию не переделать». А многие и вовсе начали со снисходительной интонацией говорить о своих соотечественниках «Русские, что с нас взять?».</p>
+		<p class="title">Мы не отдаем дань моде! Мы поступаем по велению сердца. Нынче стало модно повторять фразу «Россию не переделать». А многие и вовсе начали со снисходительной интонацией говорить о своих соотечественниках «Русские, что с нас взять?».</p>
 		<p>У каждого соотечественника и иностранца есть выбор, во что и какой информации верить.</p>
 		<p>«Умом Россию не понять
 			<br />Аршином общим не измерить!
@@ -67,6 +75,16 @@
 		
 	</div>
 </div>
+
+<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('li.products').hover(
+		function() { $('ul', this).css('display', 'block'); },
+		function() { $('ul', this).css('display', 'none'); }
+	);
+});
+</script>
 
 </body>
 
