@@ -16,8 +16,8 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :content,:class => "mceEditor" %><br />
-    <%= f.text_area :content %>
+    <%= f.label :content %><br />
+    <%= f.text_area :content,:class => "mceEditor", :size => "100x10" %>
   </div>
   <div class="actions">
     <%= f.submit %>
@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :answer %><br />
-    <%= f.text_area :answer,:class => "mceEditor" %>
+    <%= f.text_area :answer,:class => "mceEditor", :size => "100x10"  %>
   </div>
   <div class="actions">
     <%= f.submit %>
