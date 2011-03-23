@@ -29,7 +29,7 @@ em, i { font-style: italic; }
 .header h1 { width: 650px; height: 280px; display: block; overflow: hidden; text-indent: -9999px; margin: 0 0 0 40px; }
 .header h1 a { width: 100%; height: 100%; display: block; }
 .header h2 a { width: 509px; height: 71px; overflow: hidden; display: block; margin: 280px auto 0; text-indent: -9999px; background: url(title.png) no-repeat; }
-.header .order { position: absolute; top: 140px; right: 10px; }
+.header .order { position: absolute; top: 491px; right: 188px; }
 .header .order a { background: url(header-order.png) no-repeat; width: 107px; height: 87px; display: block; overflow: hidden; text-indent: -9999px; }
 
 /* MENU */
