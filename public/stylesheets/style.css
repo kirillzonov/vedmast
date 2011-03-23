@@ -16,7 +16,7 @@ em, i { font-style: italic; }
 .wrap.for-content { background: url(bg-content-main.png) no-repeat center 20px; }
 .wrap.home { background: url(bg-content.png) no-repeat center -40px; }
 .simple_link {color: #E8B24D;}
-#mycustomscroll2 { width:560px; height:400px; padding-right: 10px; }
+#mycustomscroll2 { width:590px; height:400px; padding-right: 10px; }
 .scrollgeneric { line-height: 1px; font-size: 1px; position: absolute; top: 0; left: 0; }
 .vscrollerbase { width: 10px; background-color:#04B2FF; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
 .vscrollerbar { width: 10px; background-color:#A6D962; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; cursor: pointer; }
