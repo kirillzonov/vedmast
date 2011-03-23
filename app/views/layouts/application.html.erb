@@ -95,7 +95,7 @@
         });
   </script>
 <% if logged_in? -%>
-  <div id="user-bar-action"  >(<%= link_to "Стать простым пользователем", logout_path, { :title => "Log out" }    %>)</div>
+  <div id="user-bar-action"  >(<%= link_to "Стать простым пользователем", logout_path, { :title => "Log out" }, :class => "simple_link"    %>)</div>
 <% end -%>
 
 </body>
