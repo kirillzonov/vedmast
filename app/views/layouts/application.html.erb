@@ -83,7 +83,7 @@
     </div>--!>
     <% if logged_in? -%>
     -----------
-    <%= link_to 'Добавить категорию', new_category_path, :class => "color: #E8B24D" %>
+    <%= link_to 'Добавить категорию', new_category_path, :html_options => {:color => "#E8B24D"} %>
     <% end %>
   </div>
   <script type="text/javascript">
