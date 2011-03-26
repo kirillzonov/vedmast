@@ -7,6 +7,8 @@ module ApplicationHelper
       render :inline => '<div class= "wrap for-content static products">'
     when 'product'
       render :inline => '<div class="wrap for-content static product agd">'
+    when 'faq'
+      render :inline => '<div class="wrap for-content static faq">'
     else
       render :inline => '<div class= "wrap for-content static about">'
     end

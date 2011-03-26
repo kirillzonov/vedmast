@@ -1,6 +1,5 @@
-<h1>Listing questions</h1>
+<h1>Вопросы и ответы</h1>
 
-<table>
   <% if !logged_in? %>
     <%= link_to 'New Question', new_question_path %>
   <% else %>
@@ -8,20 +7,14 @@
   <% end %>
 
 <% @visible_questions.each do |question| %>
-  <tr>
-    <td><%= question.email %></td>
-  </tr>
-  <tr>
-    <td><%= question.content %></td>
-  </tr>
-  <tr>
-    <td><%= question.answer %></td>
-  </tr>
-  <tr>
-    <td><%= link_to 'Show', question %></td>
-  </tr>
+  <% if logged_in? %>
+    <p class="title"><%= question.email %></p>
+  <% end %>
+  <p class="title"><%= question.created_at %> <%= question.name %></p>
+  <p>Вопрос: <%= question.content %></p>
+  <% if !question.answer && logged_in? %>
+    <p><%= link_to 'Ответить', edit_question_path(@question) %></p>
+    <% elsif !logged_in? && question.answer %>
+      <p>Ответ: <%= question.answer %></p>
+    <% end %>
 <% end %>
-</table>
-
-<br />
-

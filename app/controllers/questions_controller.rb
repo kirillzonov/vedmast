@@ -3,14 +3,17 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.xml
   def index
-    @questions = Question.all
+    @page = 'faq'
     @visible_questions = Question.visible_questions
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @questions }
-    end
+    index!
   end
+
+  def show
+    @page = 'faq'
+    show!
+  end
+
  def create
     @question = Question.new(params[:question])
 
