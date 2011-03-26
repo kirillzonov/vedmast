@@ -3,6 +3,8 @@
 <table>
   <% if !logged_in? %>
     <%= link_to 'New Question', new_question_path %>
+  <% else %>
+    <%= @visible_questions = @questions %>
   <% end %>
 
 <% @visible_questions.each do |question| %>
