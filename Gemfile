@@ -10,7 +10,7 @@ gem "RedCloth", :require => 'redcloth'
 gem 'sanitize'
 gem 'jquery-rails'
 gem 'inherited_resources', '~> 1.2.1'
-gem "will_paginate", "~> 3.0.pre2"
+gem "kaminari"
 
 # Use unicorn as the web server
 # gem 'unicorn'

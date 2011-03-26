@@ -1,10 +1,19 @@
-<p id="notice"><%= notice %></p>
+<h1><%= @category.name %></h1>
+<%= paginate @articles %>
 
-<p>
-  <b>Name:</b>
-  <%= @category.name %>
-</p>
+<% @articles.each do |a|%>
+<div class="items">
+  <div class="item-field">
+    <div class="item-pic"><%= image_tag(a.little_pic) %><span class="frame"></span></div>
+    <div class="item-desc">
+      <p><strong><%= link_to a.name, a%></strong></p>
+      <p><%= a.description %></p>
+    </div>
+  </div>
+</div>
+<% end %>
 
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<%= paginate @articles %>
+<% if logged_in? %>
+  <%= link_to 'Edit', edit_category_path(@category) %> |
+<% end %>
