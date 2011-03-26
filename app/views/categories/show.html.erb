@@ -14,6 +14,7 @@
 <% end %>
 
 <%= paginate @articles %>
+
 <% if logged_in? %>
-  <%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Новый товар', new_article_path %>
 <% end %>
