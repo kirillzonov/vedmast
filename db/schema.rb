@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20110326204627) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "material"
-    t.string   "short_description"
+    t.text     "short_description"
   end
 
   create_table "categories", :force => true do |t|
