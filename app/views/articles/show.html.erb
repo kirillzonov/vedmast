@@ -1,40 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @article.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @article.description %>
-</p>
-
-<p>
-  <b>Little pic:</b>
-  <%= @article.little_pic %>
-</p>
-
-<p>
-  <b>More pics:</b>
-  <%= @article.more_pics %>
-</p>
-
-<p>
-  <b>Category:</b>
-  <%= @article.category %>
-</p>
-
-<p>
-  <b>Price:</b>
-  <%= @article.price %>
-</p>
-
-<p>
-  <b>Existence:</b>
-  <%= @article.existence %>
-</p>
-
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<div class="item">
+  <div class="info">
+    <h1><strong>Название:</strong><%= @article.name %></h1>
+    <ul>
+      <li><strong>Материал:</strong><%= @article.material %></li>
+      <li><strong>Цена:</strong><%= @article.price %> p.</li>
+    </ul>
+    <div class="picture">
+      <%= image_tag @article.little_pic %>
+    </div>
+  </div>
+  <div class="desc">
+    <h2>Описание:</h2>
+    <%= @article.description %>
+  </div>
+  <% if logged_in? %>
+    <%= link_to 'Edit', edit_article_path(@article) %>
+  <% end %>
+</div>

@@ -58,13 +58,13 @@ em, i { font-style: italic; }
 .products .items .item-field .item-pic img { position: absolute; top: 2px; left: 7px; width: 80px;}
 .products .items .item-field .item-pic .frame { background: url(item-frame.png) no-repeat; position: absolute; top: 0; left: 0; z-index: 10; width: 97px; height: 80px; display: block; overflow: hidden; }
 .products .items .item-field .item-desc { float: right; width: 490px; font-style: italic; }
-.product.agd h1 { background: url(title-agd.png) no-repeat center top; height: 90px; overflow: hidden; text-indent: -9999px; }
+.product.agd h1 { no-repeat center top; height: 90px; overflow: hidden; }
 .product .item .info { overflow: hidden; }
 .product .item .info ul { float: left; margin: 40px 0 0; }
 .product .item .info ul li { font-size: 20px; line-height: 30px; }
 .product .item .info ul li strong { font-weight: normal; float: left; width: 110px; }
 .product .item .info .picture { float: right; background: url(item-bg.png) no-repeat; width: 323px; height: 220px; }
-.product .item .info .picture img { margin: 32px 0 0 48px; }
+.product .item .info .picture img { margin: 32px 0 0 48px; height: 165px;}
 .product .item .desc h2 { font-size: 20px; line-height: 30px; margin: 0 0 6px; }
 .product .item .desc p { margin: 0 0 12px; }
 

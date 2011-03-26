@@ -14,6 +14,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.xml
   def show
+    @page = 'product'
     @article = Article.find(params[:id])
 
     respond_to do |format|

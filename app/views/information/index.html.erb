@@ -1,5 +1,5 @@
 <h1>О талисманах</h1>
-<%= will_paginate @information, :class => 'pagination' %>
+<%= paginate @information %>
 <% @information.each do |information| %>
     <%= content_tag :p, link_to(information.name, information), :class => "title"%>
     <%= content_tag :p, information.short %>
@@ -8,8 +8,8 @@
     <%= link_to 'Destroy', information, :confirm => 'Are you sure?', :method => :delete %>
 <% end %>
 <% end %>
-<%= will_paginate @information, :class => 'pagination' %>
 
+<%= paginate @information %>
 <br />
 
 <% if logged_in? -%>
