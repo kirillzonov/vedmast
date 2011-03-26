@@ -1,6 +1,6 @@
 class AddShortdescriptionToArticle < ActiveRecord::Migration
   def self.up
-    add_column :articles, :short_description, :string
+    add_column :articles, :short_description, :text
   end
 
   def self.down
