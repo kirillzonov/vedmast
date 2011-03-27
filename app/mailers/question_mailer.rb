@@ -9,7 +9,7 @@ class QuestionMailer < ActionMailer::Base
   def new_question(question)
     @question = question
     @url = "http://localhost:3000#{edit_question_path(@question)}"
-    mail :to => "kirill.zonov@flatsoft.com"
+    mail :to => "drevnmast@yandex.ru"
   end
   def new_comment(question)
     @question = question
