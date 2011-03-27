@@ -5,7 +5,7 @@
   <%= tiny_mce if using_tiny_mce? %>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag 'jquery' %>
-  <%= javascript_include_tag 'jrails' %>
+  <%= javascript_include_tag 'fancyzoom.min' %>
   <%= javascript_include_tag 'flexcroll' %>
   <%= javascript_include_tag 'DD_belatedPNG_0.0.8a' %>
   <%= csrf_meta_tag %>
@@ -23,6 +23,12 @@
 			DD_belatedPNG.fix('.wrap, .header h2, .content h1, .menu img, .header h2 a, .new h1, .new .contents, .counters-top, .order a, .item-pic img');
 		</script>
 	<![endif]-->
+        <script type="text/javascript" charset="utf-8">
+          $(document).ready(function() {
+              $('div.picture a').fancyZoom({scaleImg: true, closeOnClick: true});
+              $('#medium_box_link').fancyZoom({width:400, height:300});
+              });
+</script>
 </head>
 <body>
   
