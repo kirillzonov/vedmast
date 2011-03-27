@@ -5,6 +5,7 @@ class QuestionsController < ApplicationController
   def index
     @page = 'faq'
     @visible_questions = Question.visible_questions
+    @questions = Question.all
 
     index!
   end

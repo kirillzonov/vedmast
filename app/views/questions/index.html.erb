@@ -1,19 +1,20 @@
 <h1>Вопросы и ответы</h1>
 
   <% if !logged_in? %>
-    <%= link_to 'New Question', new_question_path %>
+    <%= link_to 'Задать вопрос Мастеру', new_question_path %>
+    <% que = @visible_questions %>
   <% else %>
-    <%= @visible_questions = @questions %>
+    <% que = @questions %>
   <% end %>
 
-<% @visible_questions.each do |question| %>
+<% que.each do |question| %>
   <% if logged_in? %>
     <p class="title"><%= question.email %></p>
   <% end %>
   <p class="title"><%= question.created_at %> <%= question.name %></p>
   <p>Вопрос: <%= question.content %></p>
-  <% if !question.answer && logged_in? %>
-    <p><%= link_to 'Ответить', edit_question_path(@question) %></p>
+  <% if logged_in? && !question.answer %>
+    <p><%= link_to 'Ответить', edit_question_path(question) %></p>
     <% elsif !logged_in? && question.answer %>
       <p>Ответ: <%= question.answer %></p>
     <% end %>

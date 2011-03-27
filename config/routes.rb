@@ -13,8 +13,6 @@ Obereg::Application.routes.draw do
 
   match 'logout' => 'sessions#destroy', :as => :logout
 
-  resources :news
-
   resources :categories
 
   resources :articles
