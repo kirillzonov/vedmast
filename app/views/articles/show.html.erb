@@ -11,7 +11,9 @@
   </div>
   <div class="desc">
     <h2>Описание:</h2>
-    <%= @article.description %>
+    <div class="flexcroll" id="mycustomscroll_product">
+      <%= @article.description %>
+    </div>
   </div>
   <% if logged_in? %>
     <%= link_to 'Edit', edit_article_path(@article) %>

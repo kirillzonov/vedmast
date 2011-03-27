@@ -17,6 +17,7 @@ em, i { font-style: italic; }
 .wrap.home { background: url(bg-content.png) no-repeat center -40px; }
 .simple_link {color: #E8B24D;}
 #mycustomscroll2 { width:590px; height:400px; padding-right: 10px; outline: 0; }
+#mycustomscroll_product { width:590px; height:140px; padding-right: 10px; outline: 0; }
 .scrollgeneric { line-height: 1px; font-size: 1px; position: absolute; top: 0; left: 0; }
 .vscrollerbase { width: 10px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; background-color: #CDA364; border: 1px solid #B48E57 }
 .vscrollerbar { width: 10px; background-color:#B48E57; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; cursor: pointer; }
