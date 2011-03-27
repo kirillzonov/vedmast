@@ -3,7 +3,7 @@ class InformationController < ApplicationController
   # GET /information
   # GET /information.xml
   def index
-    @information = Information.all.paginate(:page => params[:page], :per_page => 3)
+    @information = Information.all.page(params[:page]),per(3)
     @index_html = RedCloth.new(Page.find_by_name('index').content).to_html 
 
     respond_to do |format|
