@@ -1,4 +1,6 @@
 Obereg::Application.routes.draw do
+  get "orders/index"
+
   resources :questions, :except => :destroy
 
   resources :information

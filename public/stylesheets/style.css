@@ -68,6 +68,7 @@ em, i { font-style: italic; }
 .product .item .info .picture img { margin: 32px 0 0 48px; height: 165px;}
 .product .item .desc h2 { font-size: 20px; line-height: 30px; margin: 0 0 6px; }
 .product .item .desc p { margin: 0 0 12px; }
+.order_list { font-size: 20px; line-height: 30px; }
 
 /* NEW */
 .new { width: 960px; margin: 0 auto; overflow: hidden; }

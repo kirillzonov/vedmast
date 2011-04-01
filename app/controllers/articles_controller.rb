@@ -42,16 +42,16 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.xml
   def create
-    @article = Article.new(params[:article])
-
+    @article = Article.find(params[:article_id])
+    session[:articles_id] ? session[:articles_id] << params[:article_id] : session[:articles_id] = [params[:article_id]]
     respond_to do |format|
-      if @article.save
-        format.html { redirect_to(@article, :notice => 'Article was successfully created.') }
-        format.xml  { render :xml => @article, :status => :created, :location => @article }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @article.errors, :status => :unprocessable_entity }
-      end
+   #   if @article.save
+         format.html { redirect_to(@article, :notice => 'Товар добавлен в корзину') }
+   #     format.xml  { render :xml => @article, :status => :created, :location => @article }
+   #   else
+   #     format.html { render :action => "new" }
+   #     format.xml  { render :xml => @article.errors, :status => :unprocessable_entity }
+   #   end
     end
   end
 
@@ -81,5 +81,17 @@ class ArticlesController < ApplicationController
       format.html { redirect_to(articles_url) }
       format.xml  { head :ok }
     end
+  end
+
+  private
+
+  def current_order
+    @order = session[:order_id]
+    Cart.find(session[:cart_id])
+rescue ActiveRecord::RecordNotFound
+cart = Cart.create
+session[:cart_id] = cart.id
+cart
+
   end
 end

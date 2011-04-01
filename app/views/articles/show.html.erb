@@ -1,9 +1,11 @@
 <div class="item">
   <div class="info">
+    <%= notice %>
     <h1><strong>Название:</strong><%= @article.name %></h1>
     <ul>
       <li><strong>Материал:</strong><%= @article.material %></li>
       <li><strong>Цена:</strong><%= @article.price %> p.</li>
+      <li><%= button_to 'Добавить товар в корзину' , articles_path(:article_id => @article) %></li>
     </ul>
     <div class="picture">
       <a href="#pic">
