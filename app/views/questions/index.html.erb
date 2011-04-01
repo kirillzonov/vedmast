@@ -15,7 +15,7 @@
   <p>Вопрос: <%= question.content %></p>
   <% if logged_in? && !question.answer %>
     <p><%= link_to 'Ответить', edit_question_path(question) %></p>
-    <% elsif !logged_in? && question.answer %>
+    <% elsif question.answer %>
       <p>Ответ: <%= question.answer %></p>
     <% end %>
 <% end %>
