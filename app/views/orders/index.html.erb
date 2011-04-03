@@ -1,5 +1,6 @@
 <ul>
   <% @articles.each do |a| %>
-    <li><strong><%= link_to a.name, a, :class => 'order_list' %></strong></li>
+    <li><strong><%= link_to a.name, a, :class => 'order_list' %></strong><%= button_to 'Удалить из корзины', order_path(a.id), :method => :delete %></li>
   <% end %>
 </ul>
+

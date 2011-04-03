@@ -5,7 +5,7 @@
     <ul>
       <li><strong>Материал:</strong><%= @article.material %></li>
       <li><strong>Цена:</strong><%= @article.price %> p.</li>
-      <li><%= button_to 'Добавить товар в корзину' , articles_path(:article_id => @article) %></li>
+      <li><%= button_to 'Добавить товар в корзину', orders_path(:article_id => @article.id) %></li>
     </ul>
     <div class="picture">
       <a href="#pic">

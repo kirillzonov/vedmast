@@ -26,11 +26,10 @@ class ArticlesController < ApplicationController
   # GET /articles/new
   # GET /articles/new.xml
   def new
-    @article = Article.new
-
+    @article = Article.find(params[:article_id])
+    session[:articles_id] ? session[:articles_id] << params[:article_id] : session[:articles_id] = [params[:article_id]]
     respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @article }
+         format.html { redirect_to(@article, :notice => 'Товар добавлен в корзину') }
     end
   end
 
@@ -42,16 +41,15 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.xml
   def create
-    @article = Article.find(params[:article_id])
-    session[:articles_id] ? session[:articles_id] << params[:article_id] : session[:articles_id] = [params[:article_id]]
+    @article = Article.new(params[:article])
     respond_to do |format|
-   #   if @article.save
-         format.html { redirect_to(@article, :notice => 'Товар добавлен в корзину') }
-   #     format.xml  { render :xml => @article, :status => :created, :location => @article }
-   #   else
-   #     format.html { render :action => "new" }
-   #     format.xml  { render :xml => @article.errors, :status => :unprocessable_entity }
-   #   end
+      if @article.save
+        format.html { redirect_to(@article, :notice => 'Товар создан') }
+        format.xml  { render :xml => @article, :status => :created, :location => @article }
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @article.errors, :status => :unprocessable_entity }
+      end
     end
   end
 

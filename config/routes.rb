@@ -1,5 +1,6 @@
 Obereg::Application.routes.draw do
-  get "orders/index"
+
+  resources :orders, :only => [:index, :create, :destroy]
 
   resources :questions, :except => :destroy
 
