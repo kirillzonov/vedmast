@@ -1,6 +1,6 @@
 Obereg::Application.routes.draw do
 
-  resources :orders, :only => [:index, :create, :destroy]
+  resources :orders
 
   resources :questions, :except => :destroy
 
