@@ -8,10 +8,8 @@ class OrdersController < ApplicationController
     end
   end
   def new
-    @order_sum = 0
     @order = Order.new
-    #TODO : it's not a good choise. Should to refactory
-    Article.find(session[:articles_id]).each {|a| @order_sum += a.price }
+    @order_sum = Article.find(session[:articles_id]).sum(&:price)
   end
   def create
     @order = Order.new(params[:order])
