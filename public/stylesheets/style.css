@@ -3,6 +3,7 @@ html{color:#000;background:#140a02;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6
 
 /* GLOBAL */
 
+.field_with_errors label.message {margin-left: 15px; color: red;}
 body { background: url(header2.jpg) no-repeat center top; font: normal 13px/16px "Times New Roman", serif;}
 h1 { font-style: italic; font-size: 19px; line-height: 48px; text-align: center; }
 a { font-style: italic; color: #000; text-decoration: underline; }

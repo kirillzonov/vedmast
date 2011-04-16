@@ -2,8 +2,15 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  errors:
+    messages:
+      blank: "Поле не может быть пустым"
+      invalid: "Не похоже на email адрес"
+      too_long: "Слишком много символов в поле"
+      too_short: "Слишком мало символов в поле"
+      not_a_number: "Индекс должен быть числом"
   views:  
     pagination:  
       previous: "<< Предыдущая"  
       next: "Следующая >>"  
+

@@ -31,6 +31,8 @@ GEM
     activesupport (3.0.3)
     arel (2.0.6)
     builder (2.1.2)
+    client_side_validations (3.0.2)
+      activesupport (~> 3.0.0)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     has_scope (0.5.0)
@@ -84,6 +86,7 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth
+  client_side_validations (= 3.0.2)
   inherited_resources (~> 1.2.1)
   jquery-rails
   kaminari
