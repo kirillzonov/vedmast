@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110416102114) do
+ActiveRecord::Schema.define(:version => 20110416145324) do
 
   create_table "articles", :force => true do |t|
     t.string   "name"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(:version => 20110416102114) do
     t.datetime "updated_at"
     t.string   "fathername"
     t.string   "country"
-    t.string   "index"
+    t.string   "zip_code"
     t.string   "phone"
   end
 
