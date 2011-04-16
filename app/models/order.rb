@@ -5,6 +5,6 @@ class Order < ActiveRecord::Base
   validates :lastname, :presence => true
   validates :fathername, :presence => true
   validates :country, :presence => true
-  validates :index, :presence => true, :numericality => true, :length => {:minimum => 3, :maximum => 8}
+  validates :zip_code, :presence => true, :numericality => true, :length => {:minimum => 3, :maximum => 8}
   validates :address, :presence => true
 end
