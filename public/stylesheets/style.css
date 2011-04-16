@@ -57,6 +57,7 @@ em, i { font-style: italic; }
 .products .items .item-field { margin: 0 0 10px; overflow: hidden; }
 .products .items .item-field .item-pic { float: left; width: 120px; height: 90px; position: relative; }
 .products .items .item-field .item-pic img { position: absolute; top: 2px; left: 7px; width: 80px; height: 72px;}
+.products .items .item-field .item-link { display: block; position: absolute; top: 2px; left: 7px; width: 80px; height: 72px; text-indent: -999px; }
 .products .items .item-field .item-pic .frame { background: url(item-frame.png) no-repeat; position: absolute; top: 0; left: 0; z-index: 10; width: 97px; height: 80px; display: block; overflow: hidden; }
 .products .items .item-field .item-desc { float: right; width: 490px; font-style: italic; }
 .product.agd h1 { no-repeat center top; height: 90px; overflow: hidden; }
