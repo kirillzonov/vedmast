@@ -6,7 +6,7 @@
       <li><strong>Материал:</strong><%= @article.material %></li>
       <li><strong>Цена:</strong><%= @article.price %> p.</li>
       <li></li>
-      <li><%= link_to 'Добавить товар в корзину', order_path(@article.id) %></li>
+      <li><%= link_to 'Добавить товар в корзину', order_path(@article.id), :onclick => "alert('Товар добавлен в корзину.')" %></li>
     </ul>
     <div class="picture">
       <a href="#pic" title="Нажмите для увеличения">
