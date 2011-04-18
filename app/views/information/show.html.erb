@@ -6,4 +6,4 @@
 <% if logged_in? -%>
   <%= link_to 'Edit', edit_information_path(@information) %> 
 <% end %>
-<%= link_to "Вернуться назад", :back %>
+<%= link_to "Вернуться назад", :back, :class => "back-link" %>

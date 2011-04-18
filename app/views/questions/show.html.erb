@@ -24,4 +24,4 @@
 <% if logged_in? %>
   <%= link_to 'Ответить', edit_question_path(@question) %> 
 <% end %>
-<%= link_to 'Вернуться к вопросам', questions_path %>
+<%= link_to 'Вернуться к вопросам', :back, :class => "back-link" %>

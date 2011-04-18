@@ -26,5 +26,5 @@
   <% if logged_in? %>
     <%= link_to 'Edit', edit_article_path(@article) %>
   <% end %>
-  <%= link_to "Вернуться назад", :back %>
+  <%= link_to "Вернуться назад", :back, :class => "back-link" %>
 </div>
