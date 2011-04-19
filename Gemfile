@@ -12,7 +12,7 @@ gem 'jquery-rails'
 gem 'inherited_resources', '~> 1.2.1'
 gem "kaminari"
 gem 'client_side_validations', '3.0.2'
-gem 'carrierwave-yandexfotki'
+gem 'carrierwave-yandexfotki', :require => 'carrierwave'
 
 # Use unicorn as the web server
 # gem 'unicorn'
