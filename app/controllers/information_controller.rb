@@ -1,5 +1,4 @@
 class InformationController < ApplicationController
-  uses_tiny_mce(:options => AppConfig.default_mce_options, :only => [:new, :edit])
   # GET /information
   # GET /information.xml
   def index
