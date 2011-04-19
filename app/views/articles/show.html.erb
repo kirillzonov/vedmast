@@ -1,7 +1,7 @@
 <div class="item">
   <div class="info">
     <%= notice %>
-    <h1><strong>Название:</strong><%= @article.name %></h1>
+    <h1><%= image_tag @article.name_pic_url %></h1>
     <ul>
       <li><strong>Материал:</strong><%= @article.material %></li>
       <li><strong>Цена:</strong><%= @article.price %> p.</li>
@@ -10,12 +10,12 @@
     </ul>
     <div class="picture">
       <a href="#pic" title="Нажмите для увеличения">
-        <%= image_tag @article.little_pic %>
+        <%= image_tag @article.little_pic_url %>
       </a>
     </div>
   </div>
   <div id="pic" style="display: none; z-index: 1200;">
-    <%= image_tag @article.little_pic, :size => "640x480"%>
+    <%= image_tag @article.little_pic_url, :size => "640x480"%>
   </div>
   <div class="desc">
     <h2>Описание:</h2>

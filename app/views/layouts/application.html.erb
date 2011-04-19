@@ -70,7 +70,7 @@
     <div class="contents">
       <ul>
         <% @new_articles.each do |a| %>
-          <li><%= link_to(image_tag(a.little_pic, :size => "160x120"), a )%></li>
+          <li><%= link_to(image_tag(a.little_pic_url, :size => "160x120"), a )%></li>
         <% end %>
       </ul>
     </div>

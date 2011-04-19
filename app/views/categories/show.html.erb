@@ -4,7 +4,7 @@
 <% @articles.each do |a|%>
 <div class="items">
   <div class="item-field">
-    <div class="item-pic"><%= image_tag(a.little_pic) %><span class="frame"><%= link_to nil, a, :class => "item-link" %></span></div>
+    <div class="item-pic"><%= image_tag(a.little_pic_url) %><span class="frame"><%= link_to nil, a, :class => "item-link" %></span></div>
     <div class="item-desc">
       <p><strong><%= link_to a.name, a %></strong></p>
       <p><%= a.short_description %></p>

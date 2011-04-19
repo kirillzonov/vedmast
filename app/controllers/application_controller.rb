@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_filter :get_new_articles
 
   def get_new_articles
-    @new_articles = Article.last(5).reverse
+    @new_articles = Article.recent
   end
 
   def get_categories

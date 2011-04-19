@@ -58,6 +58,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    multipart-post (1.1.0)
     nokogiri (1.4.4)
     polyglot (0.3.1)
     rack (1.2.1)
@@ -93,11 +94,13 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth
+  carrierwave
   carrierwave-yandexfotki
   client_side_validations (= 3.0.2)
   inherited_resources (~> 1.2.1)
   jquery-rails
   kaminari
+  multipart-post
   rails (= 3.0.3)
   sanitize
   sqlite3-ruby
