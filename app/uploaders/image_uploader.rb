@@ -20,4 +20,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   def remove_old_file_before_cache(new_file)
     remove! unless blank?
   end
+  def cache_dir
+    "#{Rails.root}/tmp/uploads"
+  end
+
 end
