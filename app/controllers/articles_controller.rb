@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  inherit_resources
   before_filter :get_categories
   # GET /articles
   # GET /articles.xml
@@ -62,19 +63,19 @@ class ArticlesController < ApplicationController
 
   # PUT /articles/1
   # PUT /articles/1.xml
-  def update
-    @article = Article.find(params[:id])
-
-    respond_to do |format|
-      if @article.update_attributes(params[:id])
-        format.html { redirect_to(@article, :notice => 'Article was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @article.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
+#  def update
+#    @article = Article.find(params[:id])
+#
+#    respond_to do |format|
+#      if @article.update_attributes(params[:id])
+#        format.html { redirect_to(@article, :notice => 'Article was successfully updated.') }
+#        format.xml  { head :ok }
+#      else
+#        format.html { render :action => "edit" }
+#        format.xml  { render :xml => @article.errors, :status => :unprocessable_entity }
+#      end
+#    end
+#  end
 
   # DELETE /articles/1
   # DELETE /articles/1.xml
@@ -93,10 +94,9 @@ class ArticlesController < ApplicationController
   def current_order
     @order = session[:order_id]
     Cart.find(session[:cart_id])
-rescue ActiveRecord::RecordNotFound
-cart = Cart.create
-session[:cart_id] = cart.id
-cart
-
+    rescue ActiveRecord::RecordNotFound
+    cart = Cart.create
+    session[:cart_id] = cart.id
+    cart
   end
 end
