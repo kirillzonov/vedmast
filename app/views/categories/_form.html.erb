@@ -15,6 +15,12 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+  <div class="field">
+    <%= f.label "Картинка с названием" %><br />
+    <%= image_tag(@category.name_pic_url) if @category.name_pic? %>
+    <%= f.file_field :name_pic %>
+    <%= f.hidden_field :name_pic_cache %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
