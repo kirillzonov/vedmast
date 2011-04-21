@@ -4,5 +4,5 @@
   <% end %>
 </ul>
 
-<%= link_to 'Оформить заказ', new_order_path %>
+<%= link_to 'Оформить заказ', new_order_path if @articles.present? %>
 
