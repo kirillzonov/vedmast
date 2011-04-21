@@ -2,25 +2,25 @@ Obereg::Application.routes.draw do
 
   resources :orders
 
-  resources :questions, :except => :destroy
-
   resources :information
-
-  get "pages/index"
 
   resources :users
 
+  resources :categories
+
+  resources :pages
+
+  resources :questions, :except => :destroy
+
+  resources :articles, :except => [:index, :destroy]
+
   resource :session, :only => [:new, :create, :destroy]
+
+  get "pages/index"
 
   match 'login' => 'sessions#new', :as => :login
 
   match 'logout' => 'sessions#destroy', :as => :logout
-
-  resources :categories
-
-  resources :articles
-
-  resources :pages
 
   match 'delivery' => "pages#delivery", :as => :delivery
 
